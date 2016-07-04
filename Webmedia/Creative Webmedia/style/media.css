@@ -1,0 +1,122 @@
+@media only screen and (max-width : 1135px) {
+    .left_header_block {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+    .logo {
+        float: none;
+        vertical-align: top;
+        display: inline-block;
+    }
+
+    .right_header_block {
+        float: none;
+        max-width: 100%;
+        text-align: center;
+    }
+    .login_block {
+        display: inline-block;
+        float: none;
+    }
+    .disk_portfolio {
+        margin-right: 0;
+    }
+    .content {
+        padding-left: 0;
+    }
+}
+@media only screen and (max-width : 960px) {
+    .cont_r_block {
+        float: none;
+        display: block;
+        width: 100%;
+        font-size: 0%;
+    }
+    .cont_l_block {
+        display: block;
+        float: none;
+        width: 100%;
+    }
+    .list_block {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+    }
+}
+@media only screen and (max-width : 640px) {
+
+    .logo {
+        display: block;
+        width: 100%;
+        margin-left: 0;
+    }
+    .logo a {
+        line-height: 50px;
+    }
+    nav {
+        width: 100%;
+        text-align: center;
+    }
+    nav a {
+        line-height: 40px;
+    }
+    .login_block {
+        width: 100%;
+        line-height: 40px;
+    }
+    .log {
+        display: block;
+        text-align: center;
+        margin-right: 0;
+    }
+    .reg_block {
+        display: block;
+        text-align: center;
+    }
+    .reg_block a {
+        margin-right: 0;
+    }
+
+
+    .list_block {
+        width: 50%;
+    }
+    .list_block li ul {
+        display: none;
+    }
+    .list_block .icon_main {
+        display: none;
+    }
+    .list_block .icon_main2 {
+        display: block;
+    }
+    .copyr_blcok {
+        text-align: center;
+    }
+    .copyr_img_block {
+        display: block;
+        float: none;
+        padding-left: 0;
+    }
+    .copyr_main_block {
+        padding-left: 0;
+    }
+    .copyr_main_top_l_b {
+        float: none;
+        width: 100%;
+    }
+    .copyr_main_top_r_b {
+        width: 100%;
+        float: none;
+    }
+    .verified img {
+        width: 20px;
+        height: 16px;
+        position: absolute;
+        bottom: 40px;
+        right: 0;
+        left: 60px;
+        margin: auto;
+    }
+}
