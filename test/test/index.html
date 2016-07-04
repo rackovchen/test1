@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="js/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+	<div id="letter-wrapper">
+		<div class="letter">
+			<div class="forms clearfix">
+				<form action="#">
+					<div class="form1">					
+						<input type="text" placeholder="First name" name="firstname" required minlength="3" maxlength="25">
+						<input type="text" placeholder="Last name" name="lastname" required minlength="3" maxlength="25">
+						<input type="date" placeholder="DOB" name="bday" required>
+						<input type="email" placeholder="Email" name="email"required>
+						<input type="password" placeholder="Password" id="password" required minlength="3" maxlength="25">
+        				<input type="password" placeholder="Confirm Password" id="confirm_password" required minlength="3" maxlength="25">
+						<input type="tel" placeholder="Phone" name="tel" required pattern="">					
+					</div>
+					<div class="form2">					
+						<p>Gender:
+							<input type="radio" name="sex" value="male" checked> <label for="Male">Male</label>
+							<input type="radio" name="sex" value="female"><label for="FeMale">FeMale</label>
+						</p>
+						<input id="country_name" name="country_name" type="text" list="country"placeholder="Country:" />
+						<datalist id="country">
+						   <option value="Afghanistan">
+						   <option value="Albania">
+						   <option value="Algeria">
+						   <option value="Andorra">
+						   <option value="Angola">
+						</datalist>
+						<input id="country_name" name="country_name" type="text" list="country" placeholder="State:" />
+						<datalist id="country">
+						   <option value="Alabama">
+						   <option value="Alaska">
+						   <option value="Arizona">
+						   <option value="Arkansas">
+						   <option value="California">
+						</datalist>
+						<input id="country_name" name="country_name" type="text" list="country" placeholder="City:" />
+						<datalist id="country">
+						   <option value="New York">
+						   <option value="Los Angeles">
+						   <option value="Chicago">
+						   <option value="Houston">
+						   <option value="Angola">
+						</datalist>						
+						<input type="number" pattern="[0-9]*" maxlength="5" min="0" name="zip" id="zip" placeholder="Zip Code">
+        				<input type="text" placeholder="Adress line 1" name="Adress line 1" required minlength="3" maxlength="25">
+						<input type="text" placeholder="Adress line 2" name="Adress line 2" required minlength="3" maxlength="25">			
+					</div>
+					<div class="agree">					
+						<label for="Text">I agree with the Terms and Conditions</label> 
+						<input type="checkbox" name="opinion" value="agree">					 
+					</div>
+					<div class="button_send">
+						<button>Send</button>
+					</div>
+				</form>		
+				<div class="block3">					
+					<div class="map">
+							<script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=EIT_zln-FkbOFApf7ZM-DELumWxa9pM7&width=100%"></script>
+					</div>					
+				</div>				
+			</div>
+		</div>
+		<div class="envelope_top">
+		</div>
+		<div class="envelope_mid">
+		</div>
+		<div class="envelope_bottom">
+			<a href="#">Close<img src="images/down.png" alt=""></a>
+		</div>		
+	</div>
+	<!-- confim password -->
+	<script>
+		var password = document.getElementById("password")
+	  	, confirm_password = document.getElementById("confirm_password");
+		function validatePassword(){
+		  if(password.value != confirm_password.value) {
+		    confirm_password.setCustomValidity("Passwords Don't Match");
+		  } else {
+		    confirm_password.setCustomValidity('');
+		  }
+		}
+		password.onchange = validatePassword;
+		confirm_password.onkeyup = validatePassword;
+	</script>
+<header>
+	<div id="menu">
+		<ul>
+			<li><a href="#">home</a></li>
+			<li><a href="#">servies</a></li>
+			<li><a href="#">portfolio</a></li>
+			<li><a href="#">about us</a></li>
+			<li><a href="#">blog</a></li>
+			<li><a href="#">contact us</a></li>
+		</ul>
+	</div>	
+</header>
+<!-- open / close -->
+	<script>
+		$("#menu li:last-child a").click(function() {
+		  $(this).parents('body').find('#letter-wrapper').css({height: "630px"});
+		});
+		$(".envelope_bottom a").click(function() {
+		  $(this).parents('body').find('#letter-wrapper').css({height: "0px"});
+		});
+	</script>
+</body>
+</html>
